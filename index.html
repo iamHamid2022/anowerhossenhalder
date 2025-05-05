@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Anower Hossen Halder</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    :root {
+      --primary-color: #30635a;
+      --secondary-color: #e0f2e4;
+      --accent-color: #00796b;
+      --text-color: #212121;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--secondary-color);
+      color: var(--text-color);
+    }
+
+    .elegant-welcome {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      font-size: 2.5em;
+      font-weight: 600;
+      color: #6dff33;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 0.2em 0.8em;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 51, 102, 0.6);
+      z-index: 1000;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 1em 2em;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--accent-color);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-info h1 {
+      font-size: 2.2em;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .profile-info p {
+      font-size: 1.1em;
+      margin: 10px 0;
+      line-height: 1.5;
+    }
+
+    nav {
+      background-color: var(--primary-color);
+      text-align: center;
+      padding: 1em;
+    }
+
+    .toggle-btn {
+      color: var(--white);
+      font-weight: bold;
+      background-color: transparent;
+      border: none;
+      padding: 1em;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .toggle-btn:hover {
+      color: var(--accent-color);
+    }
+
+    .content-section {
+      display: none;
+      padding: 2em;
+      background-color: var(--white);
+      margin: 1em auto;
+      max-width: 900px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 850px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    form button {
+      padding: 10px 20px;
+      background-color: var(--accent-color);
+      color: var(--white);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background-color: #004d40;
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 1em;
+      text-align: center;
+    }
+
+    #logoutBtn {
+      margin-top: 1em;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="elegant-welcome"><span id="typingText"></span></div>
+
+  <header>
+    <img src="web.jpg" alt="Dr. Anower Hossen Halder" class="profile-pic" />
+    <div class="profile-info">
+      <h1>Dr. Anower Hossen Halder</h1>
+      <p>
+        M.B.B.S (CAL), M.S (B.U), FMAS (CAL)<br>
+        FIAGES (NEW DELHI), EFIAGES (CHENNAI)<br>
+        CONSULTANT ADVANCED LAPAROSCOPIC SURGEON, GASTRO SURGEON,<br>
+        ENDOSCOPIC SURGEON, CANCER SURGEON, GASTROENTEROLOGIST
+      </p>
+    </div>
+  </header>
+
+  <nav>
+    <button class="toggle-btn" onclick="toggleContent('home')">Home</button>
+    <button class="toggle-btn" onclick="toggleContent('about')">About</button>
+    <button class="toggle-btn" onclick="toggleContent('services')">Services</button>
+    <button class="toggle-btn" onclick="toggleContent('gallery')">Gallery</button>
+    <button class="toggle-btn" onclick="toggleContent('appointment')">Appointment</button>
+    <button class="toggle-btn" onclick="toggleContent('contact')">Contact</button>
+    <button class="toggle-btn" onclick="toggleContent('login')">Login</button>
+  </nav>
+
+  <section id="home" class="content-section">
+    <h2>Welcome</h2>
+    <p>Welcome to the official website of Dr. Anower Hossen Halder. Dedicated to excellence in laparoscopic surgery and patient care.</p>
+  </section>
+
+  <section id="about" class="content-section">
+    <h2>About Me</h2>
+    <p>I am Dr. Anower Hossen Halder, M.B.B.S (M.S), the leading laparoscopic surgeon in Diamond Harbour...</p>
+  </section>
+
+  <section id="services" class="content-section">
+    <h2>Specialist in Following Procedures</h2>
+    <ul>
+      <li>Laparoscopic Appendectomy</li>
+      <li>Laparoscopic Cholecystectomy (Gallbladder Removal)</li>
+      <li>Hernia Repair Surgery</li>
+      <li>General Surgical Consultation</li>
+    </ul>
+  </section>
+
+  <section id="gallery" class="content-section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="HLH.jpg" alt="Hamid's Legacy Hospital" />
+    </div>
+  </section>
+
+  <section id="appointment" class="content-section">
+    <h2>Book an Appointment</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <input type="email" placeholder="Email" />
+      <input type="text" placeholder="Address" />
+      <input type="date" required />
+      <textarea placeholder="Reason for Appointment" required></textarea>
+      <button type="submit">Submit Appointment Request</button>
+    </form>
+  </section>
+
+  <section id="contact" class="content-section">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> hamidslegacyhospital@gmail.com</p>
+    <p><strong>WhatsApp:</strong> 7872083434</p>
+    <p><strong>Phone:</strong> 7076080711</p>
+  </section>
+
+  <section id="login" class="content-section">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="userId" placeholder="User ID" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <button id="logoutBtn" type="button" onclick="logout()">Logout</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dr. Anower Hossen Halder. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleContent(id) {
+      document.querySelectorAll('.content-section').forEach(sec => sec.style.display = 'none');
+      const section = document.getElementById(id);
+      if (section) section.style.display = 'block';
+    }
+
+    // Typing effect
+    const words = ["Welcome", "Hello", "Namaste"];
+    let wordIndex = 0, charIndex = 0, isDeleting = false;
+    const typingText = document.getElementById("typingText");
+
+    function typeEffect() {
+      const current = words[wordIndex];
+      typingText.textContent = current.substring(0, charIndex);
+      if (!isDeleting && charIndex < current.length) {
+        charIndex++;
+        setTimeout(typeEffect, 100);
+      } else if (isDeleting && charIndex > 0) {
+        charIndex--;
+        setTimeout(typeEffect, 60);
+      } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(typeEffect, 700);
+      }
+    }
+    typeEffect();
+
+    // Login
+    const loginForm = document.getElementById("loginForm");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    const VALID_USER = "admin";
+    const VALID_PASS = "1234";
+
+    function showCaptcha() {
+      const num1 = Math.floor(Math.random() * 10 + 1);
+      const num2 = Math.floor(Math.random() * 10 + 1);
+      const answer = prompt(`Captcha: What is ${num1} + ${num2}?`);
+      return parseInt(answer) === (num1 + num2);
+    }
+
+    loginForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const user = document.getElementById("userId").value.trim();
+      const pass = document.getElementById("password").value;
+
+      if (user === VALID_USER && pass === VALID_PASS) {
+        if (showCaptcha()) {
+          alert("Login successful!");
+          localStorage.setItem("loggedIn", "true");
+          logoutBtn.style.display = "inline-block";
+        } else {
+          alert("Captcha incorrect!");
+        }
+      } else {
+        alert("Invalid credentials!");
+      }
+    });
+
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      alert("Logged out!");
+      logoutBtn.style.display = "none";
+      document.getElementById("loginForm").reset();
+    }
+
+    // Show logout if already logged in
+    window.onload = function () {
+      toggleContent('home');
+      if (localStorage.getItem("loggedIn") === "true") {
+        logoutBtn.style.display = "inline-block";
+      }
+    };
+  </script>
+</body>
+</html>
